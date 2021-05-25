@@ -5,9 +5,8 @@ import auth from "./auth.js"
 
 export default (()=>{
     var app=express();
-    
     app.use(auth.initialize());
-    app.set("port", process.env.port);
+    app.set("port", process.env.PORT || 3000);
     
     app.use(express.static("./public"));
     app.use(express.json());

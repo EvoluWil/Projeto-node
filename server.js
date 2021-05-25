@@ -1,7 +1,9 @@
 import app from "./config/express.js";
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://onmnistack9:1234@omnistack9.bru91.mongodb.net/NodeExpress",{
+//mongodb+srv://onmnistack9:1234@omnistack9.bru91.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://onmnistack9:1234@omnistack9.bru91.mongodb.net/NodeExpress",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
